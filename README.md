@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # ObserverEye
 
@@ -109,7 +108,3 @@ e.g: KeepSession.java
 - 监控网页中的某处功能变化，便于在第一时间知道网站改版，发现新漏洞
 - 在XSS攻击完成后，通过不断请求来保持SESSION不被服务器销毁
 - ...
-=======
-# ObserverEye
-观察者，基于 Java 开发的 Android &amp; WEB 应用监控服务
->>>>>>> 393e78593b9f0c8d845e70468c0c25cfc94fda4c
