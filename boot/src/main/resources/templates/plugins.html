@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h3>Android 插件</h3>
+
+<ul>
+
+    <#list ap?keys as key>
+        <li>
+
+            <a href="/task/start/${key}">${ap["${key}"]}</a>
+
+        </li>
+
+    </#list>
+
+</ul>
+
+
+<h3>Web 插件</h3>
+
+<ul>
+
+    <#list wp?keys as key>
+        <li>
+
+            <a href="/task/start/${key}">${wp["${key}"]}</a>
+
+        </li>
+
+    </#list>
+
+</ul>
+
+
+<hr/>
+
+<a href="/task/datas">抓取内容</a>
+
+</body>
+</html>

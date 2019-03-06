@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="/task/startup" method="post">
+        <table>
+            <tr>
+                <td>任务名称</td>
+                <td>
+                    <input type="text" name="jobname" placeholder="任务名称" ><br/>
+                </td>
+            </tr>
+            <tr>
+                <td>重复次数</td>
+                <td>
+                    <input type="text" name="repeat"  placeholder="重复次数" ><br/>
+                </td>
+            </tr>
+            <tr>
+                <td>任务重复间隔</td>
+
+                <td>
+                    <input type="text" name="minutes"  placeholder="任务重复间隔（分钟）" ><br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>通知邮箱</td>
+
+                <td>
+                    <input type="email" name="email"  placeholder="xxx@xxx.com" ><br/>
+                </td>
+            </tr>
+
+            <#list param as item>
+                <tr>
+                    <td>${item.desc}</td>
+                    <td><input type="text" name="${item.key}"></td>
+                </tr>
+            </#list>
+
+            <tr>
+                <td>功能</td>
+                <td>
+                    <#list funcs as item>
+                        <input type="checkbox" name="fun" value="${item.value}">${item.desc}<br/>
+                    </#list>
+                </td>
+            </tr>
+
+
+        </table>
+
+        <input type="hidden" name="pluginname" value="${pluginname}">
+        <input type="submit" value="提交"/>
+
+    </form>
+
+</body>
+</html>
